@@ -12,6 +12,9 @@
     <nav class=" w-full bg-signatureGreen px-6 shadow-md ">
       <div class="max-w-4xl mx-auto flex justify-between items-center py-4">
         
+        <!-- TODO
+         Adjust the breakpoints -->
+
         <!-- Hamburger ikon för små skärmar -->
         <button id="hamburger-btn" class="lg:hidden text-white focus:outline-none absolute top-4 right-4">
           <!-- Hamburger ikon -->
@@ -55,13 +58,16 @@
     </nav>
   </header>
   <main>
+
     <!-- Hero Section -->
      <section id="hero">
       <div class="relative w-full text-white text-center">
-      <img src="./src/images/rsz_mountains.jpg" alt="" class="object-cover w-full h-full">
+      <img src="./src/images/rsz_mountains.jpg" alt="Mountains" class="object-cover w-full h-full hidden sm:block opacity-75">
+      <img src="./src/images/mountains.jpg" alt="Mountains" class="object-cover w-full h-full sm:hidden opacity-75">
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
           <h1 class="text-lg sm:text-4xl font-bold">Hello World!<br>I'm Christoffer</h1>
-          <p class="mt-4 text-lg sm:text-xl">A former social worker turned programmer with a love for powerlifting and hiking.</p>
+          <p class="mt-4 text-lg sm:text-xl sm:block">A former social worker turned programmer with a love for powerlifting and hiking.</p>
+          
         </div>
       </div>
      </section>

@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./src/**/*.{html,js}"], // Anpassa efter din projektstruktur
+  content: ["./src/**/*.,js", "./*.html"], // Anpassa efter din projektstruktur
   theme: {
     extend: {
       colors: {
