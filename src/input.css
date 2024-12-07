@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        background-color: theme("colors.signatureGreen");
+        color:white;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        max-width: 14rem;
+
+    }
+
+    .hr {
+        border: dotted rgba(45, 144, 115, 0.5) 6px; /* rgba(45, 144, 115) är färgen, 0.5 är opaciteten */
+        border-bottom: none;
+        width: 8%;
+        margin: 25px auto;
+    }
+    
+}
