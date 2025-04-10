@@ -1,54 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Träningsdagbok</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./src/output.css">
-  <script defer src="./src/javascripts/main.js"></script>
-</head>
-<body class="bg-gray-100 text-gray-900" id="workout-diary">
-  <header class="bg-signatureGreen text-white p-4">
-    <div class="max-w-4xl mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Min Träningsdagbok</h1>
-      <a href="./index.html" class="text-white underline hover:text-hoverBlue hover:no-underline">Backa</a>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Träningsdagbok</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+    <script defer src="./src/javascripts/main.js"></script>
+  </head>
+  <body class="bg-gray-100 text-gray-900" id="workout-diary">
+    <header class="bg-signatureGreen text-white p-4">
+      <div class="max-w-4xl mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Min Träningsdagbok</h1>
+        <a
+          href="./index.html"
+          class="text-white underline hover:text-hoverBlue hover:no-underline"
+          >Gå till startsidan</a
+        >
+      </div>
+    </header>
 
-  <main class="max-w-4xl mx-auto flex">
-<!-- TODO
+    <main class="max-w-4xl mx-auto flex">
+      <!-- TODO
  Adjust the breakpoint -->
-    <section class="w-full py-6 px-6">
-      <!-- Formulär för att skriva ett nytt inlägg -->
-      <section class="mb-8">
-        <h2 class="text-xl font-semibold mb-4">Skriv ett nytt inlägg</h2>
-        <form class="space-y-4">
-          <div>
-            <label for="title" class="block font-medium">Titel:</label>
-            <input type="text" id="title" name="title" class="w-full border border-gray-300 rounded p-2" required>
-          </div>
-          <div>
-            <label for="content" class="block font-medium">Innehåll:</label>
-            <textarea id="content" name="content" class="w-full border border-gray-300 rounded p-2" rows="4" required></textarea>
-          </div>
-          <button type="submit" class="bg-signatureGreen text-white px-4 py-2 rounded hover:bg-hoverBlue">
-            Lägg till inlägg
-          </button>
-        </form>
+      <section class="w-full py-6 px-6">
+        <!-- Formulär för att skriva ett nytt inlägg -->
+        <section class="mb-8">
+          <h2 class="text-xl font-semibold mb-4">Skriv ett nytt inlägg</h2>
+          <form class="space-y-4">
+            <div>
+              <label for="title" class="block font-medium">Titel:</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                class="w-full border border-gray-300 rounded p-2"
+                required
+              />
+            </div>
+            <div>
+              <label for="content" class="block font-medium">Innehåll:</label>
+              <textarea
+                id="content"
+                name="content"
+                class="w-full border border-gray-300 rounded p-2"
+                rows="4"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-signatureGreen text-white px-4 py-2 rounded hover:bg-hoverBlue"
+            >
+              Lägg till inlägg
+            </button>
+          </form>
+        </section>
+
+        <!-- Lista över inlägg -->
+        <section id="posts">
+          <h2 class="text-2xl text-center font-semibold mb-8">Träningsinlägg</h2>
+          <ul></ul>
+        </section>
       </section>
-  
-      <!-- Lista över inlägg -->
-      <section id="posts">
-        <h2 class="text-xl font-semibold mb-4">Alla inlägg</h2>
-        <ul>
-      
-        </ul>
-        
-      </section>
-    </section>
-    
-    
-  </main>
-</body>
+    </main>
+  </body>
 </html>
