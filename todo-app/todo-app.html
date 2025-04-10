@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="./main.js"></script>
+  </head>
+  <body class="bg-gray-100">
+    <header class="grid grid-cols-3">
+      <h1 class="text-2xl font-bold mb-4 text-center p-4 col-start-2">TO-DO</h1>
+    </header>
+
+    <main class="flex flex-col items-center min-h-screen">
+      <div class="flex gap-2 mb-4">
+        <input
+          id="taskInput"
+          type="text"
+          placeholder="Lägg till en uppgift"
+          class="p-2 border rounded-md"
+        />
+        <button
+          onclick="addTask()"
+          class="bg-signatureGreen hover:bg-gray-500 transition-colors duration-200 text-white p-2 rounded-md"
+        >
+          Lägg till
+        </button>
+      </div>
+
+      <ul id="taskList" class="w-full max-w-md space-y-2"></ul>
+      <div class="flex mb-4 p-4 justify-end">
+        <a href="/" class="text-right hover:text-gray-500">Gå till startsidan</a>
+      </div>
+    </main>
+  </body>
+</html>
