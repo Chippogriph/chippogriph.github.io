@@ -1,11 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+    --color-signatureGreen: #2D9073;
+    --color-hoverBlue: #C8D5DC;
+    --color-signatureTerracotta: #C65B44;
+    /* huvudfärg */
+    --color-accentTurquoise: #44C6B4;
+    /* komplement / accent */
+    --color-warmOrange: #C67A44;
+    /* analog 1 */
+    --color-roseTerracotta: #C64457;
+    /* analog 2 */
+    --color-darkTerracotta: #A64C3C;
+    /* mörkare variant */
+    --color-softBeige: #F5E6DF;
+    /* ljus neutral */
+    --color-darkGray: #333333;
+    /* mörk neutral / text */
+    --color-slateBlue: #444BC6;
+    /* triad accent / alternativ accent */
+    --color-softBeige: #F5E6DF;
+    /* Neutral bakgrund */
+    --color-coffee: #C69C6D;
+}
 
 @layer components {
     .btn {
         background-color: theme("colors.signatureGreen");
-        color:white;
+        color: white;
         font-weight: bold;
         padding: 0.5rem 1rem;
         border-radius: 4px;
@@ -14,10 +36,11 @@
     }
 
     .hr {
-        border: dotted rgba(45, 144, 115, 0.5) 6px; /* rgba(45, 144, 115) är färgen, 0.5 är opaciteten */
+        border: dotted rgba(45, 144, 115, 0.5) 6px;
+        /* rgba(45, 144, 115) är färgen, 0.5 är opaciteten */
         border-bottom: none;
         width: 8%;
         margin: 25px auto;
     }
-    
+
 }
