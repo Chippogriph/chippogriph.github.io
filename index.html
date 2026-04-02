@@ -1,254 +1,333 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="./src/output.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script defer src="./src/javascripts/main.js"></script>
-</head>
-<body class="bg-gray-100 text-gray-800" id="home">
-  <header class="text-white text-center sticky top-0 z-50">
-    <nav class=" w-full bg-signatureGreen px-6 shadow-md ">
-      <div class="max-w-4xl mx-auto flex justify-between items-center py-4">
-        
-        <!-- TODO
-         Adjust the breakpoints -->
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/src/images/Chippogriph-logga-transparent.png"
+    />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="./src/javascripts/main.js"></script>
+  </head>
+  <body class="bg-softBeige text-gray-800 scroll-smooth" id="home">
+    <div class="relative">
+      <header class="text-white absolute top-0 right-0 left-0 z-50">
+        <nav class="w-full px-6 text-4xl flex lg:justify-center">
+          <div class="flex items-center pt-6">
+            <div class="lg:hidden">
+              <a href="/" class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  fill="#FFFFFF"
+                  class="w-10"
+                >
+                  <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                  <path
+                    d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272l16 0 0 176c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-176 16 0c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1l-224-208zM240 320l32 0c26.5 0 48 21.5 48 48l0 96-128 0 0-96c0-26.5 21.5-48 48-48z"
+                  /></svg
+              ></a>
+              <!-- Hamburger ikon för små skärmar -->
+              <button
+                id="hamburger-btn"
+                class="text-white focus:outline-none absolute top-4 right-4 text-2xl"
+              >
+                <!-- Hamburger ikon -->
+                <svg
+                  id="hamburger-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-14 w-14"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+                <!-- Kryss ikon -->
+                <svg
+                  id="close-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 hidden"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <ul
+              id="desktop-menu"
+              class="hidden lg:flex list-none justify-between space-x-24 mr-8 font-semibold text-white underline"
+            >
+              <a href="/"
+                ><li
+                  class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    fill="#FFFFFF"
+                    class="w-10"
+                  >
+                    <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                    <path
+                      d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272l16 0 0 176c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-176 16 0c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1l-224-208zM240 320l32 0c26.5 0 48 21.5 48 48l0 96-128 0 0-96c0-26.5 21.5-48 48-48z"
+                    />
+                  </svg></li
+              ></a>
+              <a href="#skills"
+                ><li
+                  class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                >
+                  Skills
+                </li></a
+              >
+              <a href="#about"
+                ><li
+                  class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                >
+                  About me
+                </li></a
+              >
+              <a href="./src/pages/info-page.html#projects"
+                ><li
+                  class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                >
+                  Projects
+                </li></a
+              >
+              <a href="./src/pages/info-page.html#resume"
+                ><li
+                  class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                >
+                  Resume
+                </li></a
+              >
+            </ul>
 
-        <!-- Hamburger ikon för små skärmar -->
-        <button id="hamburger-btn" class="lg:hidden text-white focus:outline-none absolute top-4 right-4">
-          <!-- Hamburger ikon -->
-          <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-          <!-- Kryss ikon -->
-          <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
+            <!-- Menyn för små skärmar -->
+            <div
+              id="mobile-menu"
+              class="lg:hidden fixed inset-0 bg-softBeige opacity-90 hidden z-50"
+            >
+              <ul
+                class="flex flex-col items-center justify-center h-full space-y-8 text-black"
+              >
+                <li
+                  class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300"
+                >
+                  <a href="#skills" class="block w-full text-center">Skills</a>
+                </li>
+                <li
+                  class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300"
+                >
+                  <a href="#about" class="block w-full text-center"
+                    >About mes</a
+                  >
+                </li>
+                <li
+                  class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300"
+                >
+                  <a href="./src/pages/info-page.html#projects" class="block w-full text-center">Projects</a>
+                </li>
+                <li
+                  class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300"
+                >
+                  <a href="./src/pages/info-page.html#resume" class="block w-full text-center"
+                    >Resume</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- Hero Section -->
+      <section id="hero">
+        <div
+          class="relative text-white h-screen inset-0 bg-linear-to-b from-black via-transparent via-30% to-black to-60% sm:to-70%"
+        >
+          <img
+            src="./src/images/computer-coffee.jpg"
+            alt="Mountains"
+            class="object-cover object-right h-full w-full block opacity-75"
+          />
 
-        <!-- Navigationslänk (Som ska öppnas/stängas när hamburger ikonen klickas) -->
-        <ul id="menu" class="hidden lg:flex list-none justify-between space-x-8 mr-8 text-lg font-semibold text-white">
-          <a href="#resume"><li class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300">Resume</li></a>
-          <a href="#projects"><li class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300">Projects</li></a>
-          <a href="#about"><li class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300">About Me</li></a>
-          <a href="#contact"><li class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300">Contact Me</li></a>
-        </ul>
-
-        <!-- Menyn för små skärmar -->
-        <div id="mobile-menu" class="lg:hidden fixed inset-0 bg-black bg-opacity-70 hidden z-50">
-          <ul class="flex flex-col items-center justify-center h-full space-y-8 text-white">
-            <li class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300">
-              <a href="#resume" class="block w-full text-center">Resume</a>
-            </li>
-            <li class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300">
-              <a href="#projects" class="block w-full text-center">Projects</a>
-            </li>
-            <li class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300">
-              <a href="#about" class="block w-full text-center">About Me</a>
-            </li>
-            <li class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300">
-              <a href="#contact" class="block w-full text-center">Contact Me</a>
-            </li>
-          </ul>
+          <div
+            class="absolute px-6 md:left-1/2 md:transform md:-translate-x-1/2 bottom-[clamp(4rem,10vw,12rem)]"
+          >
+            <h1 class="font-bold text-3xl md:text-4xl">
+              Hello World!<br />I'm Christoffer
+            </h1>
+            <p class="mt-6 text-xl lg:leading-10">
+              A former social worker turned full-stack developer.<br /><span
+                class="font-bold text-4xl md:text-5xl text-coffee"
+                >Fueled by coffee.</span
+              ><br />
+              Passionate about building interactive websites and clean,
+              user-friendly interfaces.
+            </p>
+            <a
+              href="#projects"
+              class="inline-flex mt-10 py-2 px-6 rounded md:text-2xl bg-signatureGreen hover:scale-105 transition-transform duration-100 hover:cursor-pointer"
+            >
+              <p class="pr-4">Explore my projects</p>
+              <svg
+                class="w-4 md:w-8 md:h-8"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 500"
+                fill="#FFFFFF"
+              >
+                <path
+                  d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
-        
-        <div class="flex items-center text-white font-semibold text-xl hover:scale-110 transition-transform duration-300">
-          <a href="#home" class="flex items-center">
-            <img
-              src="./src/images/Chippogriph-logga-transparent.png"
-              alt="Chippogriph logga"
-              class="h-6 mr-2"
-            />
-            My Portfolio
+      </section>
+    </div>
+
+    <main>
+      <section id="skills" class="py-12 px-8 scroll-mt-4 max-w-4xl mx-auto">
+        <div class="text-center">
+          <h2 class="text-2xl text-signatureGreen mb-6">Skills</h2>
+          <h3 class="text-4xl font-bold text-darkGray">
+            What I can contribute
+          </h3>
+          <div class="text-lg">
+            <p class="mt-6">
+              Full-stack developer with a strong frontend focus, experienced in
+              HTML, CSS, Tailwind, JavaScript, and TypeScript. I build modern
+              applications using React and Angular, and have backend experience
+              with Node.js, Express, ASP.NET, and REST APIs.
+            </p>
+            <p class="mt-4">
+              I’m also familiar with responsive design, Git, CMS tools, and have
+              basic knowledge of accessibility, UI/UX, Next.js, and PHP.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col max-w-2/3 md:flex-row mx-auto mt-10 gap-10">
+          <div id="skill-card" class="flex-1 text-center">
+            <figure class="rounded-lg overflow-hidden aspect-4/3">
+              <img
+                src="./src/images/frontend.jpg"
+                alt="Image of a html-tag"
+                class="object-cover w-full h-full"
+              />
+            </figure>
+            <h4 class="text-2xl mt-6">Frontend development</h4>
+            <p class="mt-4">
+              React, Angular, JavaScript and TypeScript for responsive
+              interfaces.
+            </p>
+          </div>
+          <div id="skill-card" class="flex-1 text-center">
+            <figure class="rounded-lg overflow-hidden aspect-4/3">
+              <img
+                src="./src/images/backend.jpg"
+                alt="Image of the matrix, green letters and numbers"
+                class="object-cover w-full h-full"
+              />
+            </figure>
+            <h4 class="text-2xl mt-6">Backend development</h4>
+            <p class="mt-4">
+              Node.js and ASP.NET for APIs that scale and handles real traffic.
+            </p>
+          </div>
+          <div id="skill-card" class="flex-1 text-center">
+            <figure class="rounded-lg overflow-hidden aspect-4/3">
+              <img
+                src="./src/images/databse.jpg"
+                alt="Image of brown wooden drawers"
+                class="object-cover w-full h-full"
+              />
+            </figure>
+            <h4 class="text-2xl mt-6">Database architecture</h4>
+            <p class="mt-4">
+              Database design strategies and ability to manage data with SQL.
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-center gap-5">
+          <a
+            href="./src/pages/info-page.html"
+            class="inline-flex mt-10 py-2 px-6 rounded md:text-2xl text-white bg-signatureGreen hover:scale-105 transition-transform duration-100 hover:cursor-pointer"
+          >
+            Resume
+          </a>
+          <a
+            href="https://github.com/Chippogriph/"
+            class="inline-flex mt-10 py-2 px-6 rounded md:text-2xl text-white bg-signatureGreen hover:scale-105 transition-transform duration-100 hover:cursor-pointer"
+          >
+            Github
           </a>
         </div>
-      </div>
-    </nav>
-  </header>
-  <main>
+      </section>
+      <section id="about" class="py-12 px-8 scroll-mt-4 bg-[#1F2933]">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-2xl text-signatureGreen mb-6">About</h2>
+          <h3 class="text-4xl font-bold text-white mb-6">The person</h3>
+          <div class="text-white text-lg">
+            <p class="mb-4">
+              I’m passionate about programming and creating intuitive,
+              user-friendly interfaces.<br />
+              With a background in social work, I have strong experience
+              explaining complex concepts in a clear and accessible way.
+            </p>
 
-    <!-- Hero Section -->
-     <section id="hero">
-      <div class="relative w-full text-white text-center">
-      <img src="./src/images/rsz_mountains.jpg" alt="Mountains" class="object-cover w-full h-full hidden sm:block opacity-75">
-      <img src="./src/images/mountains.jpg" alt="Mountains" class="object-cover w-full h-full sm:hidden opacity-75">
-        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-          <h1 class="text-4xl font-bold">Hello World!<br>I'm Christoffer</h1>
-          <p class="mt-4 text-lg sm:text-xl sm:block">A former social worker turned programmer with a love for powerlifting and hiking.</p>
-          
-        </div>
-      </div>
-     </section>
-    
- 
+            <p class="mb-4">
+              This has shaped my approach to development, where I focus on
+              simplicity, usability, and real-world user needs.
+            </p>
 
-    <!-- Resume Section -->
-    <section id="resume" class="py-12 px-6 scroll-mt-4">
-      <article class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">Resume</h2>
-        <div class="space-y-6">
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Education</h3>
-            <ul class="list-disc list-inside text-gray-700">
-              <li class="mb-4">Fullstack Developer from EC-utbildning, 2026</li>
-              <li class="mb-4">Degree of Bachelor of Science in Social Work from Högskolan Dalarna, 2017</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold mb-2">Work Experience</h3>
-            <ul class="list-disc list-inside text-gray-700">
-              <li class="mb-4">Systemadministrator at Falu Kommun, Omvårdnadsförvaltningen, 2023-</li>
-              <li class="mb-4">Social worker at Falu Kommun, Omvårdnadsförvaltningen, 2016-2023</li>
-            </ul>
-          </div>
-      </article>
-      <article id="skills" class="py-12 max-w-4xl mx-auto">
-        <h3 class="text-2xl font-bold text-gray-800 mb-6">Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-400 mb-2">Frontend</h3>
-            <ul class="list-disc list-inside text-gray-700">
-              <li>HTML & CSS</li>
-              <li>Tailwind CSS</li>
-              <li>JavaScript (ES6+)</li>
-              <li>React – komponentbaserat tänk, hooks, context</li>
-              <li>Angular – komponenter, routing, services</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold text-gray-400 mb-2">Backend</h3>
-            <ul class="list-disc list-inside text-gray-700">
-              <li>Node.js & Express</li>
-              <li>REST API-utveckling</li>
-              <li>SQLite & grundläggande databashantering</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold text-gray-400 mb-2">Övrigt</h3>
-            <ul class="list-disc list-inside text-gray-700">
-              <li>Git & GitHub</li>
-              <li>Responsiv design</li>
-              <li>Versionshantering & samarbete i projekt</li>
-              <li>Grundläggande tillgänglighet och UX-tänk</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-xl font-semibold text-gray-400 mb-2">Projektvana</h3>
-            <ul class="list-disc list-inside text-gray-700">
-              <li>E-handel med React och Angular</li>
-              <li>Todo-appar, sökfunktioner</li>
-              <li>Bygga komponentbibliotek och jobba modulärt</li>
-              <li>Planera och bygga applikationer från grunden</li>
-            </ul>
+            <p class="mb-4">
+              My goal is to build applications that feel intuitive and just
+              work.
+            </p>
           </div>
         </div>
-      </article>
-    </section>
+      </section>
+    </main>
+    <footer id="contact" class="bg-signatureGreen text-white py-4 text-center">
+      <ul
+        class="max-w-4xl mx-auto list-none flex justify-center space-x-8 pb-2 text-3xl font-semibold"
+      >
+        <a href="https://www.instagram.com/chris_persson/">
+          <li
+            class="transition-opacity duration-300 hover:cursor-pointer hover:opacity-75"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+        </a>
+        <a href="https://www.linkedin.com/in/christoffer-persson-922301269/"
+          ><li
+            class="transition-opacity duration-300 hover:cursor-pointer hover:opacity-75"
+          >
+            <i class="fa-brands fa-linkedin"></i></li
+        ></a>
+      </ul>
 
-    <hr class="hr">
-
-    <!-- Projects Section -->
-    <section id="projects" class=" py-12 px-6 scroll-mt-4 max-w-4xl mx-auto">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">Projects</h2>
-      <article>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-white shadow-md p-4 rounded-lg hover:scale-105 transition-transform duration-100 hover:cursor-pointer hover:opacity-75">
-            <a href="./src/pages/workout-diary.html" class="block w-full h-full">
-              <h3 class="text-xl font-semibold text-signatureGreen">Workout Log</h3>
-              <p class="text-gray-700">A simple workoutlog built with normal HTML, tailwind CSS and JavaScript.</p>
-            </a>
-          </div>
-          <div class="bg-white shadow-md p-4 rounded-lg hover:scale-105 transition-transform duration-100 hover:cursor-pointer hover:opacity-75">
-            <a href="./src/pages/todo-app/todo-app.html" class="block w-full h-full">
-              <h3 class="text-xl font-semibold text-signatureGreen">TODO app</h3>
-              <p class="text-gray-700">A simple to-do app built with normal HTML, tailwind CSS and JavaScript.</p>
-            </a>
-          </div>
-        </div>
-      </article>
-      <article>
-        <h3 class="text-lg pt-6 pb-2 font-bold text-gray-400">Projects on GitHub</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-white shadow-md p-4 rounded-lg hover:scale-105 transition-transform duration-100 hover:cursor-pointer hover:opacity-75">
-            <a href="https://github.com/Chippogriph/FreakyFashion-React" class="block w-full h-full">
-              <h3 class="text-xl font-semibold text-signatureGreen mb-2">Freaky Fashion - React</h3>
-              <p class="text-gray-700 hidden md:block mb-1">
-                E-commerce app built with React and Tailwind CSS.<br>
-                Features product listings, shopping cart, search, and a simple admin panel.
-              </p>
-              <p class="text-gray-700 hidden md:block">
-                <strong>Focus:</strong> Component architecture, state management, responsive design.
-              </p>
-              <p class="text-gray-700 md:hidden">
-                React e-commerce with cart, search & admin panel.
-              </p>
-            </a>
-          </div>
-          <div class="bg-white shadow-md p-4 rounded-lg hover:scale-105 transition-transform duration-100 hover:cursor-not-allowed opacity-50">
-              <h3 class="text-xl font-semibold text-signatureGreen">Freaky Fashion - Angular</h3>
-              <p class="text-gray-700">E-commerce site built with Angular</p>
-              <p class="text-xl font-bold">In progress</p>
-          </div>
-
-            <div class="bg-white shadow-md p-4 rounded-lg hover:scale-105 transition-transform duration-100 hover:cursor-pointer hover:opacity-75">
-              <a href="https://github.com/Chippogriph/FreakyFashion" class="block w-full h-full">
-                <h3 class="text-xl font-semibold text-signatureGreen mb-2">Freaky Fashion - EJS</h3>
-                <p class="text-gray-700 hidden md:block mb-1">
-                  E-commerce site built with EJS and Tailwind CSS.<br>
-                  Includes product listings, shopping cart, search functionality, and a simple admin panel.
-                </p>
-                <p class="text-gray-700 hidden md:block">
-                  <strong>Focus:</strong> Templating with EJS, backend integration, responsive design.
-                </p>
-                <p class="text-gray-700 md:hidden">
-                  E-commerce with EJS, cart, search & admin panel.
-                </p>
-              </a>
-            </div>
-
-        </div>
-      </article>
-    </section>
-
-    <hr class="hr">
-
-    <!-- About Me Section -->
-    <section id="about" class="py-12 px-6 scroll-mt-4">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">About Me</h2>
-        <p class="text-gray-700 mb-4">
-          I'm passionate about programming and making the interface that the user interacts with as easy to understand as possible.
-        </p>
-        
-        <p class="text-gray-700 mb-4">
-          I come from a field where social workers may or may not be tech-savvy, so I have a lot of experience in explaining technical concepts to non-technical individuals.
-        </p>
-        
-        <p class="text-gray-700 mb-4">
-          From my experience as a social worker, I've learned the importance of making things easy to understand for people with different backgrounds and abilities. This is especially crucial when they find themselves in stressful environments.
-        </p>
-        
-        <p class="text-gray-700 mb-4">
-          We've all experienced the feeling that things should just work or be easier, and that is what I'm hoping to achieve with my work.
-        </p>
-        
-        <p class="text-gray-700 mb-4">
-          In my free time, I enjoy powerlifting, hiking in the mountains, and exploring new challenges.
-        </p>
-      </div>
-    </section>
-  </main>
-  <footer id="contact" class="bg-signatureGreen text-white py-4 text-center">
-    <ul class="max-w-4xl mx-auto list-none flex justify-center space-x-8 pb-2 text-lg font-semibold">
-      <a href="https://www.instagram.com/chris_persson/">
-        <li class="transition-opacity duration-300 hover:cursor-pointer hover:opacity-75"><i class="fa-brands fa-instagram"></i></li>
-      </a>
-      <a href="https://www.linkedin.com/in/christoffer-persson-922301269/"><li class="transition-opacity duration-300 hover:cursor-pointer hover:opacity-75"><i class="fa-brands fa-linkedin"></i></li></a>
-    </ul>
-
-    <p>&copy; Christoffer Persson</p>
-
-  </footer>
-</body>
+      <p>&copy; Christoffer Persson</p>
+    </footer>
+  </body>
+</html>

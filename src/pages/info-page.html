@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/src/images/Chippogriph-logga-transparent.png"
+    />
+    <link rel="stylesheet" href="../output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    
+    <script defer src="../javascripts/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="bg-softBeige text-gray-800 scroll-smooth" id="home">
+    <div class="relative">
+      <header class="text-white absolute top-0 right-0 left-0 z-50">
+        <nav class="w-full px-6 text-4xl flex lg:justify-center">
+          <div class="flex items-center pt-6">
+            <div class="lg:hidden">
+              <a
+                href="/"
+                class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  fill="#FFFFFF"
+                  class="w-10"
+                >
+                  <path
+                    d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272l16 0 0 176c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-176 16 0c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1l-224-208zM240 320l32 0c26.5 0 48 21.5 48 48l0 96-128 0 0-96c0-26.5 21.5-48 48-48z"
+                  />
+                </svg>
+              </a>
+              <!-- Hamburger ikon för små skärmar -->
+              <button
+                id="hamburger-btn"
+                class="text-white focus:outline-none absolute top-4 right-4 text-2xl"
+              >
+                <!-- Hamburger ikon -->
+                <svg
+                  id="hamburger-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-14 w-14"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+                <!-- Kryss ikon -->
+                <svg
+                  id="close-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 hidden"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <ul
+              id="desktop-menu"
+              class="hidden lg:flex list-none justify-between space-x-24 mr-8 font-semibold text-white underline"
+            >
+              <a href="/"
+                ><li
+                  class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                    fill="#FFFFFF"
+                    class="w-10"
+                  >
+                    <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                    <path
+                      d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272l16 0 0 176c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-176 16 0c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1l-224-208zM240 320l32 0c26.5 0 48 21.5 48 48l0 96-128 0 0-96c0-26.5 21.5-48 48-48z"
+                    />
+                  </svg></li
+              ></a>
+              <a href="#skills"
+                ><li
+                  class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                >
+                  Skills
+                </li></a
+              >
+              <a href="#about"
+                ><li
+                  class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                >
+                  About me
+                </li></a
+              >
+              <a href="./src/pages/info-page.html"
+                ><li
+                  class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                >
+                  Projects
+                </li></a
+              >
+              <a href="./src/pages/info-page.html"
+                ><li
+                  class="hover:text-hoverBlue cursor-pointer hover:scale-110 transition-transform duration-300"
+                >
+                  Resume
+                </li></a
+              >
+            </ul>
+
+            <!-- Menyn för små skärmar -->
+            <div
+              id="mobile-menu"
+              class="lg:hidden fixed inset-0 bg-softBeige opacity-90 hidden z-50"
+            >
+              <ul
+                class="flex flex-col items-center justify-center h-full space-y-8 text-black"
+              >
+                <li
+                  class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300"
+                >
+                  <a href="#resume" class="block w-full text-center">Resume</a>
+                </li>
+                <li
+                  class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300"
+                >
+                  <a href="#projects" class="block w-full text-center"
+                    >Projects</a
+                  >
+                </li>
+                <li
+                  class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300"
+                >
+                  <a href="#about" class="block w-full text-center">About Me</a>
+                </li>
+                <li
+                  class="text-3xl py-10 hover:text-gray-300 hover:scale-110 transition-transform duration-300"
+                >
+                  <a href="#contact" class="block w-full text-center"
+                    >Contact Me</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+    </div>
+
+    <main>
+      <div class="pt-30"> </div>
+
+     
+
+ <section id="resume" class="py-12 px-8 scroll-mt-4">
+            <article class="max-w-4xl mx-auto">
+              <h2 class="text-3xl font-bold text-signatureGreen mb-6">
+                Resume
+              </h2>
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">Education</h3>
+                  <ul class="list-disc list-inside text-darkGray">
+                    <li class="mb-4">
+                      Fullstack Developer from EC-utbildning, 2026
+                    </li>
+                    <li class="mb-4">
+                      Degree of Bachelor of Science in Social Work from
+                      Högskolan Dalarna, 2017
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold mb-2">Work Experience</h3>
+                  <ul class="list-disc list-inside text-darkGray">
+                    <li class="mb-4">
+                      Systemadministrator at Falu Kommun,
+                      Omvårdnadsförvaltningen, 2023-
+                    </li>
+                    <li class="mb-4">
+                      Social worker at Falu Kommun, Omvårdnadsförvaltningen,
+                      2016-2023
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article id="skills" class="py-12 max-w-4xl mx-auto">
+              <h3 class="text-2xl font-bold text-signatureGreen mb-6">
+                Skills
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="md:col-span-2">
+                  <h3 class="text-xl font-semibold text-darkGray mb-2">
+                    Soft skills
+                  </h3>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-darkGray mb-2">
+                    Frontend
+                  </h3>
+                  <ul class="list-disc list-inside text-darkGray">
+                    <li>HTML, CSS, SCSS and Tailwind</li>
+                    <li>JavaScript and TypeScript</li>
+                    <li>React – komponentbaserat tänk, hooks, context</li>
+                    <li>Angular – komponenter, routing, services</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-darkGray mb-2">
+                    Backend
+                  </h3>
+                  <ul class="list-disc list-inside text-darkGray">
+                    <li>Node.js & Express</li>
+                    <li>ASP.NET & Entity Framework</li>
+                    <li>REST API</li>
+                    <li>SQLite & grundläggande databashantering</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-darkGray mb-2">
+                    Övrigt
+                  </h3>
+                  <ul class="list-disc list-inside text-darkGray">
+                    <li>Git & GitHub</li>
+                    <li>Responsiv design</li>
+                    <li>CMS (Wordpress & Webflow)</li>
+                    <li>Basic knowledge in accessability och UI/UX design</li>
+                    <li>Basic knowledge in Next.js and PHP</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </section>
+          <section
+            id="projects"
+            class="py-12 px-8 scroll-mt-4 max-w-4xl mx-auto"
+          >
+            <h2 class="text-3xl font-bold text-signatureGreen mb-6">
+              Projects
+            </h2>
+            <article>
+              <h3 class="text-lg pb-2 font-bold text-darkGray">
+                Projects on GitHub
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div
+                  class="bg-white shadow-md p-4 rounded-lg hover:scale-105 transition-transform duration-100 hover:cursor-pointer hover:opacity-75"
+                >
+                  <a
+                    href="https://github.com/Chippogriph/FreakyFashion-React"
+                    class="block w-full h-full"
+                  >
+                    <h3 class="text-xl font-semibold text-coffee mb-2">
+                      Freaky Fashion - React
+                    </h3>
+                    <p class="text-gray-700 hidden md:block mb-1">
+                      E-commerce app built with React and Tailwind CSS.<br />
+                      Features product listings, shopping cart, search, and a
+                      simple admin panel.
+                    </p>
+                    <p class="text-gray-700 hidden md:block">
+                      <strong>Focus:</strong> Component architecture, state
+                      management, responsive design.
+                    </p>
+                    <p class="text-gray-700 md:hidden">
+                      React e-commerce with cart, search & admin panel.
+                    </p>
+                  </a>
+                </div>
+                <div
+                  class="bg-white shadow-md p-4 rounded-lg hover:scale-105 transition-transform duration-100 hover:cursor-not-allowed opacity-50"
+                >
+                  <h3 class="text-xl font-semibold text-coffee">
+                    Freaky Fashion - Angular
+                  </h3>
+                  <p class="text-gray-700">
+                    E-commerce site built with Angular
+                  </p>
+                  <p class="text-xl font-bold">In progress</p>
+                </div>
+              </div>
+            </article>
+            <article>
+              <h3 class="text-lg pt-6 pb-2 font-bold text-darkGray">
+                Simple Front-end projects
+              </h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div
+                  class="bg-white shadow-md p-4 rounded-lg hover:scale-105 transition-transform duration-100 hover:cursor-pointer hover:opacity-75"
+                >
+                  <a
+                    href="./src/pages/workout-diary.html"
+                    class="block w-full h-full"
+                  >
+                    <h3 class="text-xl font-semibold text-coffee">
+                      Workout Log
+                    </h3>
+                    <p class="text-gray-700">
+                      A simple workoutlog built with normal HTML, tailwind CSS
+                      and JavaScript.
+                    </p>
+                  </a>
+                </div>
+                <div
+                  class="bg-white shadow-md p-4 rounded-lg hover:scale-105 transition-transform duration-100 hover:cursor-pointer hover:opacity-75"
+                >
+                  <a
+                    href="./src/pages/todo-app/todo-app.html"
+                    class="block w-full h-full"
+                  >
+                    <h3 class="text-xl font-semibold text-coffee">TODO app</h3>
+                    <p class="text-gray-700">
+                      A simple to-do app built with normal HTML, tailwind CSS
+                      and JavaScript.
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </section>
+
+      <div class="text-darkGray text-lg">
+        <p class="mb-4">
+          I’m passionate about programming and creating intuitive interfaces
+          that are easy to understand and use.
+        </p>
+
+        <p class="mb-4">
+          With a background in social work, I’ve often worked with people who
+          have varying levels of technical knowledge. This has given me strong
+          experience in explaining complex concepts in a clear and accessible
+          way.<br />That experience has shaped how I approach development by
+          focusing on simplicity, usability, and building solutions that work
+          for people in real-world situations, especially in moments where
+          clarity matters most.
+        </p>
+
+        <p class="mb-4"></p>
+
+        <p class="mb-4">
+          We’ve all experienced frustration when things don’t work as expected.
+          My goal is to build applications that feel intuitive and just work for
+          the user.
+        </p>
+
+        <p class="mb-4">
+          Outside of coding, I enjoy powerlifting, hiking in the mountains, and
+          taking on new challenges.
+        </p>
+      </div>
+    </main>
+    <footer id="contact" class="bg-signatureGreen text-white py-4 text-center">
+      <ul
+        class="max-w-4xl mx-auto list-none flex justify-center space-x-8 pb-2 text-3xl font-semibold"
+      >
+        <a href="https://www.instagram.com/chris_persson/">
+          <li
+            class="transition-opacity duration-300 hover:cursor-pointer hover:opacity-75"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </li>
+        </a>
+        <a href="https://www.linkedin.com/in/christoffer-persson-922301269/"
+          ><li
+            class="transition-opacity duration-300 hover:cursor-pointer hover:opacity-75"
+          >
+            <i class="fa-brands fa-linkedin"></i></li
+        ></a>
+      </ul>
+
+      <p>&copy; Christoffer Persson</p>
+    </footer>
+  </body>
+</html>

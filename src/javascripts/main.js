@@ -19,7 +19,7 @@ function setupMobileMenu() {
   const hamburgerIcon = document.getElementById("hamburger-icon");
   const closeIcon = document.getElementById("close-icon");
   const mobileMenu = document.getElementById("mobile-menu");
-  const menuItems = document.querySelectorAll("#mobile-menu li");
+
 
   function toggleMenu() {
     mobileMenu.classList.toggle("hidden");
@@ -38,17 +38,12 @@ function setupMobileMenu() {
     toggleMenu();
   });
 
-  menuItems.forEach((item) => {
-    item.addEventListener("click", (event) => {
-      event.stopPropagation();
-    });
+  mobileMenu.addEventListener("click", (event) => {
+   
+      closeMenu();
+    
   });
 
-  mobileMenu.addEventListener("click", (event) => {
-    if (!event.target.closest("li")) {
-      closeMenu();
-    }
-  });
 
   window.addEventListener("click", (event) => {
     if (
